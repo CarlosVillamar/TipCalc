@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:paddingBottom="@dimen/padding_textView_default"
+    android:paddingEnd="@dimen/padding_textView_default"
+    android:paddingStart="@dimen/padding_textView_default"
+    android:paddingTop="@dimen/padding_textView_default"
+    tools:context="com.example.carlosvillamar.tipcalc.MainActivity">
+
+
+    <EditText
+        android:id="@+id/editText_BillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="0"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="end"
+        android:layout_row="1"
+        android:background="@color/colorSeek"
+        android:color="@color/colorAccent"
+        android:maxLength="6"
+        android:paddingTop="10dp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/textView_BillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="0"
+        android:background="@color/backgroundBillAmount"
+        android:hint="@string/textView_billAmountHint"
+        android:labelFor="@+id/editText_BillAmount"
+        android:padding="@dimen/padding_textView_default"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Tip"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="2"
+        android:text="@string/TipLabel"
+        android:textColor="@color/backgroundBillAmount"
+
+
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/PercentageOf_ID"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="start"
+        android:layout_row="1"
+        android:text="@string/PercentageOF"
+        android:textAlignment="center"
+        android:textColor="@color/backgroundBillAmount"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/TotalID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_row="3"
+        android:text="@string/Total"
+        android:textAlignment="center"
+        android:textColor="@color/backgroundBillAmount"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/total_view"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="end"
+        android:layout_row="3"
+        android:background="@color/backgroundBillAmount"
+        android:hint="@string/zero"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="10pt" />
+
+    <TextView
+        android:id="@+id/Tip_view"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="end"
+        android:layout_row="2"
+        android:background="@color/backgroundBillAmount"
+        android:hint="@string/zero"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="10pt" />
+
+
+
+</GridLayout>
