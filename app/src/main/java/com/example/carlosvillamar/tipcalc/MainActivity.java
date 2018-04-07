@@ -5,9 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -16,36 +13,33 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity implements TextWatcher, SeekBar.OnSeekBarChangeListener {
 
+    //set the number formats to be used for the $ amounts , and % amounts
+    private static final NumberFormat currencyFormat =
+            NumberFormat.getCurrencyInstance();
+    private static final NumberFormat percentFormat =
+            NumberFormat.getPercentInstance();
     //declare your variables for the widgets
     private EditText editTextBillAmount;
     private TextView textViewBillAmount;
     private TextView TipLabel;
     private TextView TotalLabel;
+    // private Button Clear = findViewById(R.id.Clear);
     private SeekBar amountOfTip;
     private TextView PercentOf;
-    // private Button Clear = findViewById(R.id.Clear);
-
     //declare the variables for the calculations
     private double billAmount = 0.0;
     private double percent = 0;
     //changed to 10 percent
     private double tipValue = 0.0;
 
-
-    //set the number formats to be used for the $ amounts , and % amounts
-    private static final NumberFormat currencyFormat =
-            NumberFormat.getCurrencyInstance();
-    private static final NumberFormat percentFormat =
-            NumberFormat.getPercentInstance();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //add Listeners to Widgets
-        editTextBillAmount = (EditText) findViewById(R.id.editText_BillAmount);//uncomment this line
+        editTextBillAmount = findViewById(R.id.editText_BillAmount);//uncomment this line
 
-        editTextBillAmount.addTextChangedListener((TextWatcher) this);//uncomment this line
+        editTextBillAmount.addTextChangedListener(this);//uncomment this line
 
         TipLabel = findViewById(R.id.Tip_view);
 
@@ -86,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Seek
         amountOfTip.setMax(100);
 
 
-        textViewBillAmount = (TextView) findViewById(R.id.textView_BillAmount);
+        textViewBillAmount = findViewById(R.id.textView_BillAmount);
     }
 
     @Override
